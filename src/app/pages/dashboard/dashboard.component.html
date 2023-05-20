@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<p *ngIf="!userLoginOn" class="text-danger">Usuario no autenticado</p>
+
+<div *ngIf="userLoginOn">
+  <h2 class="text-white text-center">Bienvenido {{userData.name| uppercase}} </h2>
+   <div class="container">
+    <div class="row mb-5">
+
+
+      <div class="col-md-12">
+        <a class="btn btn-primary btn-lg" routerLink="/mostrar">Productos</a>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12 d-flex justify-content-center">
+        <img src="../../../assets/prod.jpg" width="80%" height="80%">
+      </div>
+
+
+    </div>
+
+   </div>
+</div>

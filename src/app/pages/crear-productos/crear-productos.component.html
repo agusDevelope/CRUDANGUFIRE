@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-5">
+      <h2>Crear Producto</h2>
+
+<form  [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <label  class="form-label">Nombre del producto</label>
+    <input type="text" class="form-control" formControlName="Nombre" required>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Detalle del producto</label>
+    <input type="text" class="form-control" formControlName="Detalle" required>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Precio</label>
+    <input type="number" class="form-control" formControlName="Precio" required>
+  </div>
+  <button [disabled]="!postForm.valid" type="submit" class="btn btn-success">Guardar</button>
+</form>
+
+    </div>
+  </div>
+</div>
+

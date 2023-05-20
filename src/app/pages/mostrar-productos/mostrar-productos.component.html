@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row mt-5">
+    <div><a class="btn btn-primary btn-lg mb-4" routerLink="/crear">Crear</a></div>
+    <div class="col-md-3 mt-5" *ngFor="let prod of Products">
+
+
+      <div class="card"  >
+        <img src="../../../assets/perfil-de-usuario.jpg" class="card-img-top" width="25%" height="25%">
+        <div class="card-body">
+          <h5 class="card-title">{{prod.Nombre}}</h5>
+          <p class="card-text"> {{prod.Detalle}} </p>
+          <p class="card-text"> $ {{prod.Precio }} </p>
+          <div class="btn-group d-flex justify-content-between">
+            <button routerLink="/editar/{{prod.id}}" class="btn btn-outline-warning mx-auto" style="margin:auto"><i class="fa-solid fa-pen"></i>Editar</button>
+            <button (click)="deleteRecord(prod)" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i> Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
