@@ -12,7 +12,7 @@ import { LoginRequest } from 'src/app/services/auth/loginRequest';
 export class LoginComponent implements OnInit {
   loginError:string="";
   loginForm = new FormGroup({
-    email: new FormControl('agus@gmail.com',[Validators.required, Validators.email]),
+    email: new FormControl('',[Validators.required, Validators.email]),
     password: new FormControl('',Validators.required),
 
   });
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
   // }
   login(){
     if(this.loginForm.valid){
-      
+
       this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
         next:(userData)=>{
           console.log(userData);
